@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Understrap
+ * @package understrap-child
  */
 
 // Exit if accessed directly.
@@ -25,6 +25,25 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
 <body <?php body_class(); ?> <?php understrap_body_attributes(); ?>>
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
+
+	<!-- ******************* Contact Bar **************************** -->
+	<div id="contact-bar">
+
+		<div class="container">
+			
+			<ul>
+
+				<li><a href="https://www.facebook.com/jimbrennancarpentry"><i class="fa fa-facebook-square fa-lg rotate" aria-hidden="true"></i></a></li>
+
+				<li><a href="tel:0872832471"><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;<?php esc_html_e( '087 283 2471', 'textdomain' ); ?></a></li>
+
+				<li><a href="tel:018387286"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<?php esc_html_e( '01 838 7286', 'textdomain' ); ?></a></li>
+
+			</ul>
+		</div>
+
+	</div>
+
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<header id="wrapper-navbar">

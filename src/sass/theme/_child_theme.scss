@@ -1,14 +1,39 @@
+/***********Global****************/
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type:none;
+}
+
+
+/************Override Bootstrap Styles******************/
+
+.btn-primary {
+  background-color: $bg-primary;
+  &:hover {
+    background-color: $blue-sky;
+    color: silver;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
 
   /*******************HeroCanvas***********************/
   
   .hero-jumbotron {
     color:white;
-    background: url("../img/header.jpg") center;
+    background: url("../img/header.jpg") no-repeat center center;
     background-size: cover;
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 50px;
-    align-items: center;
+    align-items: flex-end;
     height: 70vh;
     @include media-breakpoint-up(sm) {
       min-height: 60vh;
@@ -18,6 +43,56 @@
     }
 } 
 
+.banner {
+  text-shadow: 1px 1px 5px $black;
+}
+
+.tagline {
+  text-shadow: 1px 1px 5px $black;
+  font-size: 2rem;
+}
+
+
+/************************ Contact Bar**********************/
+
+#contact-bar {
+  background-color: $blue-black;
+  padding: 1px;
+  margin: 0px;
+ ul {
+  display: flex;
+  margin:0px, 20px;
+  justify-content: center;
+  li {
+    margin: 0px 10px 0px 10px;
+  a {
+    color: $white;
+    &:hover {
+      color:silver;
+    }   
+  }
+  }
+}
+}
+
+
+/******************* Navbar************************/
+
+.navbar {
+  margin: 0px;
+  }
+
+#main-nav {
+  background-color: $sky-blue;
+}
+
+#main-menu > li > a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: silver;
+  }
+}
 
 /*******************Product Cards****************/
 
@@ -30,3 +105,61 @@
   align-items: center;
 }
 
+#wardrobes-card {
+  background: url("../img/wardrobecard.jpg") center;
+  background-size: cover;
+  min-height:30vh;
+}
+
+#shelving-units-card {
+  background: url("../img/sittingroomunits5.jpg") center;
+  background-size: cover;
+  min-height:30vh;
+}
+
+#rad-cover-card {
+  background: url("../img/radiator_cover.jpg") center;
+  background-size: cover;
+  min-height:30vh;
+}
+
+/************************Footer************************/
+
+#wrapper-footer {
+  background-color: $blue-black;
+  padding-top: 3rem;
+  color: $white;
+  text-align: center;
+  @include media-breakpoint-up(md){
+    text-align: left;
+  }
+}
+
+.site-footer {
+  h5 {
+    padding-left: 1rem;
+  }
+  ul {
+    margin-top:.5rem;
+    padding: 1rem;
+  }
+  li {
+    padding-bottom: 10px;
+  }
+  a {
+    color: $white;
+    &:hover {
+      color: silver;
+    }
+  } 
+}
+
+.footer-list-inline {
+  padding-left: 40px;
+  @include media-breakpoint-up(sm){
+    margin-top: 3rem;
+  }
+  li {
+    font-size: .8rem;
+  }
+}
