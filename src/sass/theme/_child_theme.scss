@@ -9,6 +9,63 @@ ul {
 }
 
 
+//Override Understrap default styles
+.cat-links, .comments-link {
+  display:none;
+}
+
+
+//Override WP styles
+
+//Featured image
+
+.post {
+  text-align: center;
+}
+
+.wp-post-image {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+//Widgets
+
+.widget {
+  @extend %boxshadow;
+  margin: 2rem;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.widget-area {
+    @include media-breakpoint-up (md){ 
+    margin-top: 25px;
+  }
+  }
+
+.widget-title {
+  padding-left: 40px;
+}
+
+#right-sidebar {
+  padding-left: 0;
+  padding-right: 0;
+  }
+
+#search-2 {
+  padding:0;
+}
+
+.widget {
+li {
+  padding-top:2px;
+  padding-bottom:2px;
+  font-size: 1.25rem;
+  font-weight:350;
+  }
+}
+
+
 /************Override Bootstrap Styles******************/
 
 .btn-primary {
@@ -109,18 +166,21 @@ a {
   background: url("../img/wardrobecard.jpg") center;
   background-size: cover;
   min-height:30vh;
+  margin-bottom: 5px;
 }
 
 #shelving-units-card {
   background: url("../img/sittingroomunits5.jpg") center;
   background-size: cover;
   min-height:30vh;
+  margin-bottom:5px;
 }
 
 #rad-cover-card {
-  background: url("../img/radiator_cover.jpg") center;
+  background: url("../img/radiator_cover2.jpeg") center;
   background-size: cover;
   min-height:30vh;
+  margin-bottom:5px;
 }
 
 /************************Footer************************/

@@ -87,3 +87,10 @@ function understrap_child_customize_controls_js() {
 	);
 }
 add_action( 'customize_controls_enqueue_scripts', 'understrap_child_customize_controls_js' );
+
+
+// Hide posted by
+add_filter( 'understrap_posted_by', '__return_false' );
+
+// Hide posted on
+add_filter( 'understrap_posted_on', '__return_false' );
